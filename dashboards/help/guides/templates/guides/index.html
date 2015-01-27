@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles %}
+{% block title %}{% trans "SUSE Cloud Guides" %}{% endblock %}
+
+{% block page_header %}
+  {% include "horizon/common/_page_header.html" with title=_("SUSE Cloud Guides") %}
+{% endblock page_header %}
+
+{% block main %}
+<ul style="list-style-type:disc; margin-left:20px">
+    <li>
+        <a href="{% static "dashboard/help/html/book.cloud.user.html" %}">End User Guide</a>
+        (<a href="{% static "dashboard/help/susecloud-user_en.pdf" %}">PDF</a>)
+    </li>
+    <li>
+        <a href="{% static "dashboard/help/html/book.cloud.admin.html" %}">Admin User Guide</a>
+        (<a href="{% static "dashboard/help/susecloud-admin_en.pdf" %}">PDF</a>)
+    </li>
+</ul>
+</p>
+<p>You can find additional up-to-date information about OpenStack on the project <a href="http://docs.openstack.org" target="_blank">documentation webpage</a>, but do note that it may be for a different version.</p>
+{% endblock %}
