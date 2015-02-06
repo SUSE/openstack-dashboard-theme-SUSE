@@ -1,0 +1,81 @@
+{% load branding i18n staticfiles %}
+{% load load_config from horizon %}
+
+{% load_config as HORIZON_CONFIG %}
+
+
+{% comment %}
+
+    NB: The context for 500 pages is an empty dict.
+        Don't add any content here that depends on things from
+        the context.
+
+{% endcomment %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <link rel="shortcut icon" href="{% static "dashboard/img/favicon.ico" %}"/>
+    <title>{% trans "Server error" %} - {% site_branding %}</title>
+    {% block css %}
+    <style>
+    a {
+        color: #7ac142;
+    }
+    body {
+      color: #fff;
+      text-align: center;
+      font-weight: normal;
+      background-image: linear-gradient(to right, #1fad7a, #80c235);
+      padding: 0px;
+      margin: 0px !important;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    div#container {
+
+      background: url("{% static "dashboard/img/logo-splash.png" %}") no-repeat scroll center 35px ;
+      padding-top: 140px;
+      background-color: #252829;
+      border: 1px solid #333;
+      border-radius: 0 0 8px 8px;
+      display: block;
+      left: auto;
+      margin: 0 auto;
+      position: static;
+      top: auto;
+      width: 300px;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      font-weight: normal;
+      color: #7ac142;
+    }
+    div#container > div {
+      padding: 25px;
+    }
+    </style>
+    {% endblock %}
+  </head>
+  <body id="{% block body_id %}{% endblock %}">
+    {% block page_header %}{% endblock %}
+    {% block content %}
+    <div id="container">
+      <div id="text">
+        {% block text %}
+        <h2>{% trans "Something went wrong!" %}</h2>
+        <p>{% trans "An unexpected error has occurred. Try refreshing the page. If that doesn't help, contact your local administrator." %}</p>
+        {% endblock %}
+      </div>
+      <div id="links">
+        {% block links %}
+        <p><a href="/">{% trans "Home" %}</a></p>
+        <p><a href="{{ HORIZON_CONFIG.help_url }}">{% trans "Help" %}</a></p>
+        {% endblock %}
+      </div>
+    </div>
+    {% endblock %}
+    {% block footer %}{% endblock %}
+    {% block js %}{% endblock %}
+  </body>
+</html>
