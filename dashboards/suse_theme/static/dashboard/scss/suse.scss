@@ -1,26 +1,26 @@
 @import "horizon.scss";
 
-body { background: #f5f5f5;}
+body { background: #f5f5f5; }
 
 .topbar { 
   background: #383c3e; 
   border-bottom: 1px solid #000;
+  padding-right: 15px;
   box-shadow: #666 1px 1px 3px;
-  #user_info > a {
+  .switcher_bar .btn.btn-topnav {
+    padding: 8px 12px;
+    font-size: 13px;      
+    border-radius: 0px;
+    line-height: 1.42857;
+    border-radius: 0px;
     color: #d7d7d7;
-  }
-  .context-box .context-selection .dropdown-toggle {
-    color: #d7d7d7;
-  }
-  .switcher_bar {
     background-color: #222;
-    background-repeat: no-repeat;
+    border-color: #222;
     border: 1px solid #000;
-    border-radius: 4px;
-    div { color: #d7d7d7; }
   }
 }
 .sidebar {
+  background-color: #232526;
   border-width: 0 2px 2px 0;
   border-color: #0b0e0c;
   border-style: solid;
@@ -31,67 +31,49 @@ body { background: #f5f5f5;}
   background-color: #232526;
   dt {
     background-color: #232526;
-    background-image: url(/static/dashboard/img/right_droparrow-light.png);
-    background-position: 13px;
     border-bottom: 1px solid #171819;
-    border-top: 1px solid #383c3e;
-    padding-right: 0px;
-    padding-left: 15px;
-    max-width: 236px;
-    margin-right: 0px;
-    div { color: #d7d7d7; }
+    padding: 0.5em 1.2em;
+    max-width: 231px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #d7d7d7;
+    span { color: #fff; }
   }
   dt.active {
-    background-image: url(/static/dashboard/img/drop_arrow-light.png);
-    background-position: 10px;
     background-color: #434343;
-    border-bottom: 1px solid #171819;
-    border-top: 1px solid #666;
-    width: 236px;
-    margin-right: 0px;
-    div { color: #7ac142; }
+    color: #7ac142;
   }
   dd {
-    margin-left: 0px;
     a { color: #fff; }
     h4 {
-      color: #fff;
-      background-position: 23px;
+      padding-left: 35px;
+      color: #d7d7d7;
       background-color: #252829;
-      background-image: url(/static/dashboard/img/right_droparrow-light.png);
-      border: none;
-      border-top: 1px solid #383c3e; 
-      padding-left: 25px;
-      max-width: 100%;
-      div { color: #d7d7d7; }
+      border-top: 3px solid #383c3e; 
+      border-bottom: 0px; 
+      span { color: #fff; }
     }
     h4.active { 
-      background-color: #252829;
-      background-position: 20px;
-      border-bottom-color: #000;
-      padding-left: 25px;
-      background-image: url(/static/dashboard/img/drop_arrow-light.png);
-      div { color: #7ac142; } 
+      color: #7ac142;
     }
     ul { 
       background-color: #171819;
-      width: 236px; 
-      margin-top: 0px; 
+      list-style: outside none none;
+      margin: 0px;
+      padding: 0px;
     }
-    li a { padding-left: 35px; width: 236px;}
+  //   li a { padding-left: 35px; width: 236px;}
     li a.active {
       color: #7ac142;
       background-color: #111;
       border: none;
       border-top: 1px solid #000;
       border-bottom: 1px solid #222;
-      margin-left: 0px;
-      padding-left: 55px;
-      width: 100%;
+      //box-shadow: -3px 3px 6px -3px #C7C7C7;
     }
-    li a:last-child {
-      margin-bottom: 0px;
-    }
+  //   li a:last-child {
+  //     margin-bottom: 0px;
+  //   }
   }  
 }
 
@@ -138,7 +120,7 @@ html, body {
     color: #fff;
     width: 100%;
     border-color: transparent;
-}
+  }
   .modal-footer {
     border: none;
     padding-top: 0px;

@@ -15,6 +15,11 @@
     {% include "horizon/_custom_head_js.html" %}
   </head>
   <body id="{% block body_id %}{% endblock %}" ng-app='hz'>
+    <noscript>
+      <div class="javascript_disabled_alert">
+        This application requires JavaScript to be enabled on your web browser.
+      </div>
+    </noscript>
     {% block content %}
       <div id="container">
         <div class='topbar'>
@@ -26,8 +31,14 @@
             {% include 'horizon/common/_sidebar.html' %}
           {% endblock %}
           <div id='content_body'>
-            {% block page_header %}{% endblock %}
-            {% block main %}{% endblock %}
+            <div class="row">
+              <div class="col-xs-12">
+                {% block page_header %}
+                  {% include "horizon/common/_page_header.html" with title=page_title %}
+                {% endblock %}
+                {% block main %}{% endblock %}
+              </div>
+            </div>
           </div>
         </div>
       </div>
