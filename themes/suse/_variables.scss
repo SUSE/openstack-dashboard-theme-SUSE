@@ -1,1 +1,30 @@
 @import "../themes/default/variables";
+
+$navbar-default-color:             #fff;
+$navbar-default-bg:                #3f2c50;
+$navbar-default-border:            darken($navbar-default-bg, 6.5%);
+
+// Navbar links
+$navbar-default-link-color:                #ddd;
+$navbar-default-link-hover-color:          #fff;
+$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-active-color:         #f3eef4;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%);
+$navbar-default-link-disabled-color:       #ccc;
+$navbar-default-link-disabled-bg:          transparent;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           darken($navbar-default-bg, 6.5%);
+$navbar-default-toggle-icon-bar-bg:        #fff;
+$navbar-default-toggle-border-color:       #fff;
+
+
+$sidebar-active-color: #2a8d8e;
+$sidebar-box-shadow-color: #362c38;
+$sidebar-box-shadow: -3px 2px 6px -2px $sidebar-box-shadow-color inset, -1px 0 0 0 $sidebar-box-shadow-color inset;
+$sidebar-background-color: #4f4b54;
+$sidebar-active-indicator-width: $caret-width-base;
+$sidebar-inner-box-color: #aeaaaf;
+$sidebar-inner-box-line-color: #9d979e;
+$sidebar-main-link-background: #8a868b;
+$sidebar-main-link-hover-background: #6a666b;

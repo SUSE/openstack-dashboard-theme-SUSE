@@ -1,133 +1,59 @@
 @import "../themes/default/styles";
 
-body { background: #f5f5f5; }
-
-.topbar { 
-  background: #383c3e; 
-  border-bottom: 1px solid #000;
-  padding-right: 15px;
-  box-shadow: #666 1px 1px 3px;
-  .switcher_bar .btn.btn-topnav {
-    padding: 8px 12px;
-    font-size: 13px;      
-    border-radius: 0px;
-    line-height: 1.42857;
-    border-radius: 0px;
-    color: #d7d7d7;
-    background-color: #222;
-    border-color: #222;
-    border: 1px solid #000;
-  }
+#sidebar .openstack-panel > a {
+    color: #fff;
 }
-.sidebar {
-  background-color: #232526;
-  border-width: 0 2px 2px 0;
-  border-color: #0b0e0c;
-  border-style: solid;
-  box-shadow: #999 1px 1px 3px;
-  h4 { margin-left: 0px }
+#sidebar .openstack-panel > a:hover {
+    color: darken($sidebar-active-color, 6.5%);
 }
-.nav_accordion {
-  background-color: #232526;
-  dt {
-    background-color: #232526;
-    border-bottom: 1px solid #171819;
-    padding: 0.5em 1.2em;
-    max-width: 231px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    color: #d7d7d7;
-    span { color: #fff; }
-  }
-  dt.active {
-    background-color: #434343;
-    color: #7ac142;
-  }
-  dd {
-    a { color: #fff; }
-    h4 {
-      padding-left: 35px;
-      color: #d7d7d7;
-      background-color: #252829;
-      border-top: 3px solid #383c3e; 
-      border-bottom: 0px; 
-      span { color: #fff; }
-    }
-    h4.active { 
-      color: #7ac142;
-    }
-    ul { 
-      background-color: #171819;
-      list-style: outside none none;
-      margin: 0px;
-      padding: 0px;
-    }
-  //   li a { padding-left: 35px; width: 236px;}
-    li a.active {
-      color: #7ac142;
-      background-color: #111;
-      border: none;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #222;
-      //box-shadow: -3px 3px 6px -3px #C7C7C7;
-    }
-  //   li a:last-child {
-  //     margin-bottom: 0px;
-  //   }
-  }  
+#sidebar .panel {
+    background-color: $sidebar-inner-box-color;
 }
 
-.page-header {
-  border-bottom: 0px;
-  text-indent: -999px;
-  padding: 0px;
-  margin: 0px;
-  h2 {
-    font-size: 10px;
-  }
+#sidebar .openstack-dashboard > a:hover, #sidebar .openstack-dashboard > a:focus, #sidebar li > a {
+    background-color: $sidebar-active-color;
+    color: #eee
+}
+.nav-pills.nav-stacked > li > a {
+    border-top: 0;
+    border-bottom: 1px solid $sidebar-inner-box-line-color;
+}
+.nav-pills.nav-stacked a {
+    color: #2c193d;
 }
 
-html, body {
-  height: 100%;
+#sidebar .nav-header > a > .nav-header-title {
+    margin-left: 15px;
+    border-bottom: 1px solid $sidebar-inner-box-line-color;
+    font-weight: normal;
 }
+
+.nav-pills.nav-stacked > li > .in {
+    border-bottom: 2px solid $sidebar-active-color;
+}
+#sidebar .openstack-dashboard > a.collapsed, {
+    background-color: $sidebar-main-link-background;
+}
+#sidebar .openstack-dashboard > a.collapsed:hover, {
+    background-color: $sidebar-main-link-hover-background;
+}
+.context-selection > li > ul > li > a {
+  color: $sidebar-active-color;
+}
+h1, h2, h3.modal-title { color: $sidebar-active-color}
+h1 {font-size: 30px; font-weight: normal}
+h2 {font-size: 23px}
+h3 {font-size: 19px}
+
+#content_body { padding-left: 240px}
+
+.page-header { margin: 5px 0 15px 0}
 
 #splash {
-  @include gradient-horizontal(#1fad7a, #80c235);
-  .login {
-    background-color: #252829;
-    width: 300px;
-    border: 1px solid  #333;
-    top: auto;
-    left: auto;
-    position: static;
-    margin: 0px;
-    margin-bottom: 120px;
-    @include center-block;
-    border-radius: 0px 0px 8px 8px;
+min-height: 500px;
+background: $navbar-default-bg; /* Old browsers */
+    .login {
+        background-color: #fff;
+        border: 3px solid $navbar-default-link-active-bg;
+        border-radius: 0;
   }
-  .modal-header {
-    border: none;
-    padding: 0;
-    min-height: 0;
-  }
-  .modal-body {
-    background-color: #252829;
-    color: #fff;
-    label { color: #fff; font-weight: normal }
-  }
-  .btn-primary {
-    background-color: #00b268;
-    color: #fff;
-    width: 100%;
-    border-color: transparent;
-  }
-  .modal-footer {
-    border: none;
-    padding-top: 0px;
-  }
-}
-
-.form-control-feedback {
-  color: #000;
-  top: 0;
-}
