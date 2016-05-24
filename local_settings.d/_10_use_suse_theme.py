@@ -1,1 +1,1 @@
-CUSTOM_THEME_PATH="themes/suse" 
+AVAILABLE_THEMES = [('suse', 'SUSE', 'themes/suse')]

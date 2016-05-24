@@ -1,5 +1,4 @@
 from django.core.urlresolvers import reverse_lazy
-import horizon
 
 # The name of the dashboard to be added to HORIZON['dashboards']. Required.
 DASHBOARD = 'help'
@@ -11,5 +10,5 @@ ADD_EXCEPTIONS = {}
 ADD_INSTALLED_APPS = ['openstack_dashboard.dashboards.help']
 
 UPDATE_HORIZON_CONFIG = {
-    'help_url': reverse_lazy("horizon:help:guides:index"),
+    'help_url': reverse_lazy('horizon:help:guides:index'),
 }

@@ -1,4 +1,4 @@
-@import "../themes/default/styles";
+@import "/themes/default/styles";
 
 #sidebar .openstack-panel > a {
     color: #fff;
@@ -37,6 +37,11 @@
 #sidebar .openstack-dashboard > a.collapsed:hover, {
     background-color: $sidebar-main-link-hover-background;
 }
+
+#sidebar > ul#sidebar-accordion > li > a {
+    color: #fff;
+}
+
 .context-selection > li > ul > li > a {
   color: $sidebar-active-color;
 }
@@ -45,15 +50,9 @@ h1 {font-size: 30px; font-weight: normal}
 h2 {font-size: 23px}
 h3 {font-size: 19px}
 
-#content_body { padding-left: 240px}
-
 .page-header { margin: 5px 0 15px 0}
 
 #splash {
-min-height: 500px;
-background: $navbar-default-bg;
-    .login {
-        background-color: #fff;
-        border: 3px solid $navbar-default-link-active-bg;
-        border-radius: 0;
-  }
+    min-height: 500px;
+    background: $navbar-default-bg;
+}
