@@ -1,58 +1,24 @@
-@import "/themes/default/styles";
 
-#sidebar .openstack-panel > a {
-    color: #fff;
-}
-#sidebar .openstack-panel > a:hover {
-    color: darken($sidebar-active-color, 6.5%);
-}
 #sidebar .panel {
-    background-color: $sidebar-inner-box-color;
-}
-
-#sidebar .openstack-dashboard > a:hover, #sidebar .openstack-dashboard > a:focus, #sidebar li > a {
-    background-color: $sidebar-active-color;
-    color: #eee
-}
-.nav-pills.nav-stacked > li > a {
-    border-top: 0;
-    border-bottom: 1px solid $sidebar-inner-box-line-color;
-}
-.nav-pills.nav-stacked a {
-    color: #2c193d;
-}
-
-#sidebar .nav-header > a > .nav-header-title {
-    margin-left: 15px;
-    border-bottom: 1px solid $sidebar-inner-box-line-color;
-    font-weight: normal;
-}
-
-.nav-pills.nav-stacked > li > .in {
-    border-bottom: 2px solid $sidebar-active-color;
-}
-#sidebar .openstack-dashboard > a.collapsed, {
-    background-color: $sidebar-main-link-background;
-}
-#sidebar .openstack-dashboard > a.collapsed:hover, {
-    background-color: $sidebar-main-link-hover-background;
-}
-
-#sidebar > ul#sidebar-accordion > li > a {
     color: #fff;
+    background: #00243e;
 }
 
-.context-selection > li > ul > li > a {
-  color: $sidebar-active-color;
+#sidebar .panel > a {
+    color: #fff;
+    background: #00243e;
 }
-h1, h2, h3.modal-title { color: $sidebar-active-color}
-h1 {font-size: 30px; font-weight: normal}
-h2 {font-size: 23px}
-h3 {font-size: 19px}
 
-.page-header { margin: 5px 0 15px 0}
+#sidebar .panel > a:hover {
+    color: #fff;
+    background: #003159;
+}
 
-#splash {
-    min-height: 500px;
-    background: $navbar-default-bg;
+#sidebar .panel .list-group-item:not(.active) {
+      color: #fff;
+      background: #003159;
+}
+#sidebar .panel a:not(.active):hover {
+      color: #fff;
+      background: #013a69;
 }
