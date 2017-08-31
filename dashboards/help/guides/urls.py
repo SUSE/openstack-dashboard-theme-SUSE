@@ -12,11 +12,12 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from django.contrib.auth.decorators import login_required
 
 from .views import GuidesView
 
 
-urlpatterns = patterns('',
-    url(r'^$', login_required(GuidesView.as_view()), name='index'))
+urlpatterns = [
+    url(r'^$', login_required(GuidesView.as_view()), name='index'),
+]
