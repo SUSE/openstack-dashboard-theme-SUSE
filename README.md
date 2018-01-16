@@ -1,2 +1,1 @@
-# branding
-SUSE OpenStack Cloud dashboard branding
+# SUSE branding for the OpenStack Horizon dashboard
