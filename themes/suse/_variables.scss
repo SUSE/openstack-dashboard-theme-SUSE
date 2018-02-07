@@ -16,12 +16,15 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 
 /* Bootstrap variables overrides */
 
-
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
 $gray-dark:              lighten(#000, 20%) !default;   // #333
 $gray:                   #6e6e6e !default;
 $gray-light:             #BBB !default;
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+$gray-lighter-2:         #eeeeee;
+
+$blue-darker:          #00243E;
+$blue-dark:            #003159;
 
 $brand-primary:         #00C081 !default;
 $brand-success:         #5cb85c !default;
@@ -352,14 +355,14 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #fff !default;
-$navbar-default-bg:                #00243e !default;
-$navbar-default-border:            #001727 !default;
+$navbar-default-color:             $gray !default;
+$navbar-default-bg:                #fff !default;
+$navbar-default-border:            $gray-lighter-2 !default;
 
 // Navbar links
 $navbar-default-link-color:                $navbar-default-color !default;
-$navbar-default-link-hover-color:          $navbar-default-color !default;
-$navbar-default-link-hover-bg:             #003159 !default;
+$navbar-default-link-hover-color:          $gray-light !default;
+$navbar-default-link-hover-bg:             $gray-lighter-2 !default;
 $navbar-default-link-active-color:         $navbar-default-color !default;
 $navbar-default-link-active-bg:            $navbar-default-link-hover-bg !default;
 $navbar-default-link-disabled-color:       $gray-light !default;
