@@ -1,3 +1,5 @@
+# (c) Copyright 2017-2018 SUSE LLC
+
 from django.core.urlresolvers import reverse_lazy
 
 # The name of the dashboard to be added to HORIZON['dashboards']. Required.
