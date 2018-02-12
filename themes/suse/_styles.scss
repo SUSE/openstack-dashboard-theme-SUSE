@@ -1,28 +1,100 @@
 // (c) Copyright 2017-2018 SUSE LLC
 
-#splash {background-color: #00243e;}
-#splash .panel, .panel-default > .panel-heading, .panel-footer {background-color: #00243e; color: #ffffff; border: 0;}
-#splash input { color: #ffffff; background-color: #003159; border-color: #001727;}
+@import "./_variables.scss";
+
+
+.navbar-brand > img {
+ display: inline-block;
+ height: 36px;
+ vertical-align: bottom;
+ margin-left: -4px;
+}
+.navbar-brand {
+  &.suse, &.suse:hover {
+    background: $blue-darker;
+    padding-right: 0px;
+    width: 220px;
+  }
+}
+
+.openstack-logo {
+  width: 200px;
+}
+
+body {
+  background: #eff1f3;
+}
+
+.topbar .navbar	{
+  border: none;
+
+  .container-fluid {
+    padding-left: 0px;
+  }
+  .navbar-header {
+    border-bottom: 1px solid #003258;
+    padding-left: 15px;
+  }
+}
+
+#main_content {
+  padding-top: 36px;
+}
+
+#sidebar {
+  position: fixed;
+  top: 37px;
+  left: 0;
+  height: 100%;
+  background: $blue-darker;
+  width: 220px;
+  overflow-y: auto;
+}
+
+#sidebar-accordion {
+  width: 220px;
+}
+
+.breadcrumb {
+  background-color: #fff;
+}
+
+#splash {
+  background-color: $blue-darker;
+}
+#splash .panel, .panel-default > .panel-heading, .panel-footer {
+  background-color: $blue-darker;
+  color: #ffffff;
+  border: 0;
+  margin-top: 5em;
+}
+#splash input {
+  color: #ffffff;
+  background-color: $blue-dark;
+  border-color: #001727;
+}
+
 #sidebar .panel {
     color: #fff;
-    background: #00243e;
+    background: $blue-darker;
 }
 
 #sidebar .panel > a {
     color: #fff;
-    background: #00243e;
+    background: $blue-darker;
 }
 
 #sidebar .panel > a:hover {
     color: #fff;
-    background: #003159;
+    background: $blue-dark;
 }
 
 #sidebar .panel .list-group-item:not(.active) {
       color: #fff;
-      background: #003159;
+      background: $blue-dark;
 }
 #sidebar .panel a:not(.active):hover {
       color: #fff;
       background: #013a69;
 }
+
