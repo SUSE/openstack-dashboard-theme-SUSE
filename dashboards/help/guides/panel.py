@@ -22,7 +22,7 @@ from openstack_dashboard.dashboards.help import dashboard
 
 
 class Guides(horizon.Panel):
-    name = _("SUSE Cloud Guides")
+    name = _("SUSE OpenStack Cloud Guides")
     slug = 'guides'
 
 
