@@ -23,7 +23,7 @@
 }
 
 body {
-  background: #eff1f3;
+  background: $body-bg;
 }
 
 .topbar .navbar	{
@@ -96,6 +96,9 @@ body {
 }
 #sidebar .panel a:not(.active):hover {
       color: #fff;
-      background: #013a69;
+      background: $blue-less-dark;
 }
 
+button.close {
+  opacity: unset;
+}
