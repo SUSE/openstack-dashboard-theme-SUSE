@@ -23,7 +23,7 @@
 }
 
 body {
-  background: #eff1f3;
+  background: $body-bg;
 }
 
 .topbar .navbar	{
@@ -96,6 +96,44 @@ body {
 }
 #sidebar .panel a:not(.active):hover {
       color: #fff;
-      background: #013a69;
+      background: $blue-less-dark;
 }
 
+button.close {
+  opacity: unset;
+}
+
+.btn-primary {
+  &:hover {
+    color: $btn-primary-hover-color;
+    background-color: $btn-primary-hover-bg;
+  }
+}
+
+.btn-success {
+  &:hover {
+    color: $btn-success-hover-color;
+    background-color: $btn-success-hover-bg;
+  }
+}
+
+.btn-info {
+  &:hover {
+    color: $btn-info-hover-color;
+    background-color: $btn-info-hover-bg;
+  }
+}
+
+.btn-warning {
+  &:hover {
+    color: $btn-warning-hover-color;
+    background-color: $btn-warning-hover-bg;
+  }
+}
+
+.btn-danger {
+  &:hover {
+    color: $btn-danger-hover-color;
+    background-color: $btn-danger-hover-bg;
+  }
+}
