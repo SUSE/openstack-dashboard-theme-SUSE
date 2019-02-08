@@ -15,7 +15,14 @@
 
 
 body {
-  background: $body-bg;
+  // Paint the entire page background with the same color as the navbar background
+  // so that no moatter how the user scrolls down, it will still appear to have
+  // a navbar.  Then paint the background of the portion of the content body on the
+  // right with the desired background color.
+  background: $blue-darker;
+    #content_body > .container-fluid {
+      background: $body-bg;
+  }
 }
 
 #sidebar {
