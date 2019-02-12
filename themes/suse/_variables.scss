@@ -122,9 +122,9 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        4px !default;
-$border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border-radius-base:        2px !default;
+$border-radius-large:       4px !default;
+$border-radius-small:       1px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    $bc-black !default;
@@ -164,41 +164,74 @@ $table-border-color:            $gray-lighter !default;
 
 // The foreground for several of these colors was changed from white to
 // black in order to meet the contrast ratio standards
-$btn-font-weight:                normal !default;
+$btn-font-weight:                bold !default;
 
-$btn-default-color:              $bc-gray-800 !default;
-$btn-default-bg:                 $body-bg !default;
-$btn-default-border:             $bc-gray-300 !default;
+$btn-default-color:              $bc-gray-900;
+$btn-default-bg:                 transparent;
+$btn-default-border:             $bc-gray-900;
+$btn-default-hover-color:        $bc-gray-600;
+$btn-default-hover-bg:           transparent;
+$btn-default-hover-border:       $bc-gray-600;
+$btn-default-active-color:        $bc-gray-600;
+$btn-default-active-bg:           transparent;
+$btn-default-active-border:       $bc-gray-600;
 
-$btn-primary-color:              $bc-black !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             $brand-primary-border !default;
+// Default color to use for primary button
+$btn-primary-color:              $bc-white;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $brand-primary;
+
+// Colors to use when button is focused (via keyboard), hovered (via mouse)
+//   or toggled on
 $btn-primary-hover-color:        $btn-primary-color;
-$btn-primary-hover-bg:           $bc-green-800 !default;
+$btn-primary-hover-bg:           $bc-green-700;
+$btn-primary-hover-border:       $bc-green-700;
 
-$btn-success-color:              $bc-black !default;
-$btn-success-bg:                 $brand-success !default;
-$btn-success-border:             $brand-success-border !default;
-$btn-success-hover-color:        $btn-success-color;
-$btn-success-hover-bg:           $bc-green-800 !default;
+// Color to use when button is actively being clicked
+$btn-primary-active-color:       $btn-primary-color;
+$btn-primary-active-bg:          $bc-green-900;
+$btn-primary-active-border:      $bc-green-900;
 
-$btn-info-color:                 $bc-black !default;
-$btn-info-bg:                    $brand-info !default;
-$btn-info-border:                $brand-info-border !default;
-$btn-info-hover-color:           $btn-info-color;
-$btn-info-hover-bg:              $bc-cerulean-800 !default;
+// Success should be the same as primary
+$btn-success-color:              $btn-primary-color;
+$btn-success-bg:                 $btn-primary-bg;
+$btn-success-border:             $btn-primary-border;
+$btn-success-hover-color:        $btn-primary-hover-color;
+$btn-success-hover-bg:           $btn-primary-hover-bg;
+$btn-success-hover-border:       $btn-primary-hover-border;
+$btn-success-active-color:       $btn-primary-active-color;
+$btn-success-active-bg:          $btn-primary-active-bg;
+$btn-success-active-border:      $btn-primary-active-border;
 
-$btn-warning-color:              $bc-black !default;
-$btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             $brand-warning-border !default;
-$btn-warning-hover-color:        $btn-warning-color;
-$btn-warning-hover-bg:           $bc-yellow-800 !default;
+$btn-info-color:                 $bc-white;
+$btn-info-bg:                    $brand-info;
+$btn-info-border:                $brand-info;
+$btn-info-hover-color:           $bc-white;
+$btn-info-hover-bg:              $bc-cerulean-700;
+$btn-info-hover-border:          $bc-cerulean-700;
+$btn-info-active-color:          $bc-white;
+$btn-info-active-bg:             $bc-cerulean-900;
+$btn-info-active-border:         $bc-cerulean-900;
 
-$btn-danger-color:               $bc-black !default;
-$btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              $brand-danger-border !default;
-$btn-danger-hover-color:         $btn-danger-color;
-$btn-danger-hover-bg:            $bc-red-800 !default;
+$btn-warning-color:              $bc-white;
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             $brand-warning;
+$btn-warning-hover-color:        $bc-white;
+$btn-warning-hover-bg:           $bc-yellow-800;
+$btn-warning-hover-border:       $bc-yellow-800;
+$btn-warning-active-color:       $bc-white;
+$btn-warning-active-bg:          $bc-yellow-900;
+$btn-warning-active-border:      $bc-yellow-900;
+
+$btn-danger-color:               $bc-white;
+$btn-danger-bg:                  $brand-danger;
+$btn-danger-border:              $brand-danger;
+$btn-danger-hover-color:         $bc-white;
+$btn-danger-hover-bg:            $bc-red-800;
+$btn-danger-hover-border:        $bc-red-800;
+$btn-danger-active-color:        $bc-white;
+$btn-danger-active-bg:           $bc-red-900;
+$btn-danger-active-border:       $bc-red-900;
 
 $btn-link-disabled-color:        $gray-light !default;
 
