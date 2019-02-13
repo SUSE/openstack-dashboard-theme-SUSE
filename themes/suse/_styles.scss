@@ -113,3 +113,10 @@ button.close {
     background-color: $btn-danger-hover-bg;
   }
 }
+
+// Prevent pagination controls from overwriting pulldown menu
+#sidebar {
+  @media (max-width: $screen-xs-max) {
+      z-index: 4;
+  }
+}
