@@ -425,13 +425,13 @@ $navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
-$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-color:         $gray-dark;
 $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           #00243e !default;
+$navbar-default-toggle-hover-bg:           $gray-dark !default;
 $navbar-default-toggle-icon-bar-bg:        $bc-gray-100 !default;
-$navbar-default-toggle-border-color:       #003159 !default;
+$navbar-default-toggle-border-color:       $gray-dark !default;
 
 
 // Inverted navbar

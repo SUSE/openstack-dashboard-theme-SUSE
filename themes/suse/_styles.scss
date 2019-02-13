@@ -4,99 +4,75 @@
 @import "./_variables.scss";
 
 
-.navbar-brand > img {
- display: inline-block;
- height: 36px;
- vertical-align: bottom;
- margin-left: -4px;
-}
 .navbar-brand {
   &.suse, &.suse:hover {
     background: $blue-darker;
-    padding-right: 0px;
-    width: 220px;
+  }
+  .openstack-logo {
+    width: 200px;
   }
 }
 
-.openstack-logo {
-  width: 200px;
-}
 
 body {
-  background: $body-bg;
-}
-
-.topbar .navbar	{
-  border: none;
-
-  .container-fluid {
-    padding-left: 0px;
+  // Paint the entire page background with the same color as the navbar background
+  // so that no matter how far the user scrolls down, it will still appear to have
+  // a navbar.  Then paint the background of the portion of the content body on the
+  // right with the desired background color.
+  #main_content {
+    background: $blue-darker;
   }
-  .navbar-header {
-    border-bottom: 1px solid #003258;
-    padding-left: 15px;
+  #content_body > .container-fluid {
+    background: $body-bg;
   }
-}
-
-#main_content {
-  padding-top: 36px;
 }
 
 #sidebar {
-  position: fixed;
-  top: 37px;
-  left: 0;
-  height: 100%;
+  height: 100vh;
   background: $blue-darker;
-  width: 220px;
-  overflow-y: auto;
+  .panel {
+    color: $body-bg;
+    background: $blue-darker;
+
+    > a {
+      color: $bc-white;
+      background: $blue-darker;
+
+      &:hover {
+        background: $blue-dark;
+      }
+    }
+
+    .list-group-item:not(.active) {
+      color: #fff;
+      background: $blue-dark;
+    }
+
+    a:not(.active):hover {
+      color: #fff;
+      background: $blue-less-dark;
+    }
+  }
 }
 
-#sidebar-accordion {
-  width: 220px;
-}
 
 .breadcrumb {
-  background-color: #fff;
+  background-color: $body-bg;
 }
 
 #splash {
   background-color: $blue-darker;
-}
-#splash .panel, .panel-default > .logo-panel-heading, .panel-footer {
-  background-color: $blue-darker;
-  color: #ffffff;
-  border: 0;
-  margin-top: 5em;
-}
-#splash input {
-  color: #ffffff;
-  background-color: $blue-dark;
-  border-color: #001727;
-}
-
-#sidebar .panel {
-    color: #fff;
-    background: $blue-darker;
-}
-
-#sidebar .panel > a {
-    color: #fff;
-    background: $blue-darker;
-}
-
-#sidebar .panel > a:hover {
-    color: #fff;
-    background: $blue-dark;
-}
-
-#sidebar .panel .list-group-item:not(.active) {
-      color: #fff;
-      background: $blue-dark;
-}
-#sidebar .panel a:not(.active):hover {
-      color: #fff;
-      background: $blue-less-dark;
+  .panel, .panel-default > .logo-panel-heading, .panel-footer {
+    background-color: $blue-darker;
+    color: #ffffff;
+    border: 0;
+    margin-top: 5em;
+  }
+  input {
+    color: #ffffff;
+    background-color: $blue-dark;
+    border-color: #001727;
+  }
 }
 
 button.close {
@@ -221,5 +197,12 @@ button.close {
         border-color: $btn-danger-border;
       }
     }
+  }
+}
+
+// Prevent pagination controls from overwriting pulldown menu
+#sidebar {
+  @media (max-width: $screen-xs-max) {
+      z-index: 4;
   }
 }
