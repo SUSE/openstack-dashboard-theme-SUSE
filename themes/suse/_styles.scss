@@ -13,6 +13,11 @@
   }
 }
 
+.container.login.suse-login {
+  margin-top: 0px;
+  padding-top: $navbar-height * 2;
+}
+
 
 body {
   // Paint the entire page background with the same color as the navbar background
