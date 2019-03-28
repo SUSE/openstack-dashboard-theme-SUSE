@@ -205,6 +205,14 @@ button.close {
   }
 }
 
+.btn-group {
+  > .btn.btn-default.active {
+    color: $btn-primary-active-color;
+    background-color: $btn-primary-active-bg;
+    border-color: $btn-primary-active-border;
+  }
+}
+
 // Prevent pagination controls from overwriting pulldown menu
 #sidebar {
   @media (max-width: $screen-xs-max) {
