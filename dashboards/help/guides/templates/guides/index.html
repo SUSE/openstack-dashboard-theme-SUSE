@@ -10,11 +10,17 @@
 
 {% block main %}
 <ul style="list-style-type:disc; margin-left:20px">
+   <li>
+        <a href="{% static "help/openstack-user/index.html" %}">OpenStack End User Guide</a>
+    </li>
+    <li>
+        <a href="{% static "help/openstack-admin/index.html" %}">OpenStack Admin User Guide</a>
+    </li>
     <li>
         <a href="{% static "help/supplement/suse-openstack-cloud-supplement.en.html" %}">Supplement to Admin User Guide and End User Guide</a>
         (<a href="{% static "help/supplement/suse-openstack-cloud-supplement.en.pdf" %}">PDF</a>)
     </li>
 </ul>
 </p>
-<p>You can find additional up-to-date information about OpenStack on the project <a href="http://docs.openstack.org" target="_blank">documentation webpage</a>, but do note that it may be for a different version.</p>
+<p>You can find additional up-to-date information about OpenStack on the <a href="https://docs.openstack.org/rocky/" target="_blank">project documentation webpage</a>.</p>
 {% endblock %}
